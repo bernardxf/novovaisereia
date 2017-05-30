@@ -22,7 +22,8 @@
 	var videos = function () {
 		$.ajax({
 			type: "GET",
-			url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyBMlhB8C6gohtTX6s-FU1a8ePEXAVVcadg&part=snippet&maxResults=6&playlistId=PLg1mgM4-CUvHYUrq_nkaZ9lVDKYaj01KU",
+			// url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyBMlhB8C6gohtTX6s-FU1a8ePEXAVVcadg&part=snippet&maxResults=6&playlistId=PLg1mgM4-CUvHYUrq_nkaZ9lVDKYaj01KU",
+			url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyBMlhB8C6gohtTX6s-FU1a8ePEXAVVcadg&part=snippet&maxResults=2&playlistId=PLg1mgM4-CUvHYUrq_nkaZ9lVDKYaj01KU",
 			success: function (response) {
 				for(var key in response.items) {
 					$('.youtube ul').append('<li><iframe width="310" height="174" src="https://www.youtube.com/embed/' + response.items[key].snippet.resourceId.videoId + '" frameborder="0" allowfullscreen></iframe><h3>' + response.items[key].snippet.title + '</h3></li>')

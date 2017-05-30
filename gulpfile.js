@@ -31,14 +31,8 @@ gulp.task('copyJS', function() {
 		.pipe(gulp.dest(destino+'js/'));
 });
 
-gulp.task('copyVideo', function() {
-	return gulp.src('dev/video/**/*')
-		.pipe(copy())
-		.pipe(gulp.dest(destino+'video/'));
-});
-
 gulp.task('imagemin', function(){
-    gulp.src('dev/images/*')
+    gulp.src('dev/images/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest(destino+'images/'))
 });
