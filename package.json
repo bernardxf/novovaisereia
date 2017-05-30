@@ -1,0 +1,23 @@
+{
+  "name": "bernard",
+  "version": "1.0.0",
+  "description": "Novo site do Bernard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "site",
+    "bernard"
+  ],
+  "author": "Bernard Faria",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-contrib-copy": "^0.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
