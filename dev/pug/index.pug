@@ -32,13 +32,59 @@ html
 			.content
 				h2 Competições
 				h3 Veja meus últimos resultados
-				a.button(href="javascript:void(0);") Mostrar mais
+				ul
+					li
+						.foto
+						.dados
+							.data 
+								span 11 de março
+							.comp
+								span Festival de natação master
+							.local
+								span Jaraguá Country Club
+							.provas
+								span
+									span 100m Medley - 1:08.71
+									span 100m Peito - 1:02.50
+									span 50m Borboleta - 30.71
+									span 100m Borboleta - 1:09.71
+					li
+						.foto
+						.dados
+							.data 
+								span 11 de março
+							.comp
+								span Festival de natação master
+							.local
+								span Jaraguá Country Club
+							.provas
+								span
+									span 100m Medley - 1:08.71
+									span 100m Peito - 1:02.50
+									span 50m Borboleta - 30.71
+									span 100m Borboleta - 1:09.71
+					li
+						.foto
+						.dados
+							.data 
+								span 11 de março
+							.comp
+								span Festival de natação master
+							.local
+								span Jaraguá Country Club
+							.provas
+								span
+									span 100m Medley - 1:08.71
+									span 100m Peito - 1:02.50
+									span 50m Borboleta - 30.71
+									span 100m Borboleta - 1:09.71
+				//- a.button(href="javascript:void(0);") Mostrar mais
 		section.youtube
 			.content
 				h2 Meu canal no youtube
 				h3 Confira algumas provas, meus treinamentos e meu dia a dia!
 				ul
-				a.button(href="javascript:void(0);") Inscreva-se
+				a.button(href="https://www.youtube.com/channel/UCSVOoIaZolUTQo05oLvk71g?sub_confirmation=1", target="_blank") Inscreva-se
 		section
 			.contante
 				h2 Contato
@@ -59,7 +105,21 @@ html
 					#instafeed
 				.face
 					h2 Facebook
-		
+					.fb-page(data-href="https://www.facebook.com/vaisereia/", data-small-header="false", data-adapt-container-width="true", data-hide-cover="false", data-show-facepile="true")
+						blockquote.fb-xfbml-parse-ignore(cite="https://www.facebook.com/vaisereia/")
+							a(href="https://www.facebook.com/vaisereia/") Vai Sereia
+			.copy Vai sereia &copy; 2017 - Todos os direitos reservados
+
+		#fb-root
+		script(type="text/javascript").
+			(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.9";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
 		script(type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js")
 		script(type="text/javascript", src="js/main.js")
 

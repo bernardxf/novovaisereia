@@ -46,4 +46,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('images',['imagemin'], function() {});
-gulp.task('site',['pug','stylus', 'copyVideo', 'copyFonts','copyJS','watch'], function() {});
+gulp.task('site',['pug','stylus', 'copyFonts','copyJS','watch'], function() {});
