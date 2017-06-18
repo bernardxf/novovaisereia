@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700')
 
 *
 	margin 0
 	outline none
 	padding 0
+	-webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
 a
 	text-decoration none
 ul
@@ -48,6 +50,7 @@ section
 footer
 	display inline-block
 	position relative
+	vertical-align top
 	width 100%
 	.content
 		display block
@@ -58,38 +61,147 @@ footer
 header
 	background-color #125697
 	.content
+		height 100px
 		padding 0
+	.social
+		display block
+		float right
+		margin 15px 0 0
+		a
+			color #fff
+			display inline-block
+			margin 0 12px
+			position relative
+			vertical-align top
+			&:before
+				display block
+				font-family icomoon
+				font-size 20px
+			&.inst:before
+				content '\e902'
+			&.ytube:before
+				content '\e906'
+			&.fbook:before
+				content '\e901'
+	.logo
+		background url(../images/logo.png) 0 0 no-repeat
+		display block
+		height 61px
+		float left
+		margin 20px 0
+		width 237px
+	ul
+		clear both
+		display block
+		float right
+		margin -40px 0 0
+		li
+			display inline-block
+			margin 0 12px
+			vertical-align top
+			a
+				color #fff
+				display block
+				font-size 17px
+				text-transform uppercase
+				&:hover
+					text-decoration underline
 		
-.banner
-	background-image url(../images/slide/01.png)
-	background-position center
-	background-size cover
+#slideshow
+	display block
+	position relative
 	height 650px
+	width 100%
+	div
+		background-position center
+		background-repeat no-repeat
+		background-size cover
+		bottom 0
+		display block
+		opacity 0
+		position absolute
+		left 0
+		right 0
+		top 0
+		transition all ease .5s
+		&.active
+			opacity 1
+		&:nth-child(1)
+			background-image url(../images/slide/01.png)
+		&:nth-child(2)
+			background-image url(../images/slide/02.png)
+		&:nth-child(3)
+			background-image url(../images/slide/03.png)
+		&:nth-child(4)
+			background-image url(../images/slide/04.png)
+		&:nth-child(5)
+			background-image url(../images/slide/05.png)
+			
 		
-.competicao
-.contato
+#competicao
+#contato
 	background-color #F5F6F7
 	
-.competicao
+#sobre
+	h3
+		margin 0 0 30px
+	.fotos
+		display inline-block
+		margin 0 30px 0 0
+		vertical-align top
+		width 460px
+		.foto
+			display block
+			height 306px
+			margin 0 0 20px 0
+			width 460px
+			&.ft1
+				background url(../images/sobre.jpg) 0 0 no-repeat
+			&.ft2
+				background url(../images/sobre2.jpg) 0 0 no-repeat
+				height 259px
+			&.ft3
+				background url(../images/sobre3.jpg) 0 0 no-repeat
+			
+	.texto
+		display inline-block
+		vertical-align top
+		width 630px
+		p
+			color #535353
+			display block
+			font-size 22px
+			font-weight 300
+			margin 0 0 15px
+#competicao
 	ul
 		display block
 		margin 30px 0 0
 		li
 			display inline-block
-			margin 0 20px
+			margin 0 20px 20px
 			vertical-align top
 			width 355px
 			.foto
-				background-image url(http://sportsregras.com/wp-content/uploads/2016/05/natacao-1-e1464170591834.jpg)
 				background-position center
 				background-repeat no-repeat
 				background-size cover
 				display block
 				height 200px
-				width 355
+				width 355px
+				&.mineiro-inverno
+					background-image url(../images/fotos/mineiro-inverno.jpg)
+				&.festival3
+					background-image url(../images/fotos/3festival.jpg)
+				&.festival2
+					background-image url(../images/fotos/2festival.jpg)
+				&.festival1
+					background-image url(../images/fotos/1festival.jpg)
 			.dados
+				border-top 2px solid #00529B
 				background-color #fff
 				display block
+				height 250px
 				padding 10px
 				width 335px
 				div
@@ -141,9 +253,7 @@ header
 						height 27px
 						left 13px
 						width 23px
-				
-
-.youtube
+#youtube
 	ul
 		display block
 		margin 50px 0 0
@@ -160,7 +270,51 @@ header
 				text-transform uppercase
 	.button
 		margin 30px auto 0
-
+#contato
+	form
+		display block
+		margin 20px auto 0
+		width 970px
+		#retornoHTML
+			display block
+			font-size 18px
+			font-weight 700
+			margin 0 0 20px
+		.left
+			display inline-block
+			margin 0 15px 0 0
+			vertical-align top
+			width 450px
+			input
+				border 2px solid #fff
+				color #666
+				display block
+				font-size 16px
+				height 55px
+				margin 0 0 20px
+				padding 0 15px
+				text-transform uppercase
+				width 420px
+				&:focus
+					border-color #00509B
+		textarea
+			border 2px solid #fff
+			color #666
+			display inline-block
+			font-size 16px
+			height 183px
+			margin 0 0 15px
+			padding 15px
+			text-transform uppercase
+			vertical-align top
+			width 470px
+			&:focus
+				border-color #00509B
+		button
+			background-color #f5f6f7
+			&:hover
+				background-color #00529B
+				
 footer
 	background-color #222429
 	.content
@@ -192,6 +346,8 @@ footer
 						width 100%
 					.info
 						display none
+		.face
+			width 430px
 	.copy
 		background-color #151619
 		color #999
