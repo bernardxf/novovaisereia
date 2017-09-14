@@ -2,6 +2,7 @@ doctype html
 html
 	head
 		title #VaiSereia
+		link(rel="stylesheet", type="text/css", href="style/bootstrap-grid.min.css")
 		link(rel="stylesheet", type="text/css", href="style/main.css")
 		meta(http-equiv="content-type", content="text/html; charset=UTF-8")
 		meta(name="viewport", content="width=device-width,minimum-scale=1")
@@ -29,118 +30,136 @@ html
 		meta(itemprop="description" content="Site destinado a mostrar o dia a dia do atleta Bernard Faria. Crossfit, natação, dicas de alimentação e muitos detalhes da vida de um atleta fora do comum!")
 	body
 		header#header
-			.content
-				.social
-					a.fbook(href="https://www.facebook.com/vaisereia/", target="_blank")
-					a.ytube(href="https://www.youtube.com/channel/UCSVOoIaZolUTQo05oLvk71g?sub_confirmation=1", target="_blank")
-					a.inst(href="https://www.instagram.com/bernardxf/", target="_blank")
-				a.logo(href="javascript:void(0);")
-				ul#menu
-					li
-						a(href="#header") Home
-					li
-						a(href="#sobre") Sobre
-					li
-						a(href="#competicao") Competições
-					li
-						a(href="#youtube") Vídeos
-					li
-						a(href="#contato") Contato
+			.container
+				.row
+					.col-md-12
+						.social
+							a.fbook(href="https://www.facebook.com/vaisereia/", target="_blank")
+							a.ytube(href="https://www.youtube.com/channel/UCSVOoIaZolUTQo05oLvk71g?sub_confirmation=1", target="_blank")
+							a.inst(href="https://www.instagram.com/bernardxf/", target="_blank")
+						a.logo(href="javascript:void(0);")
+						ul#menu
+							li
+								a(href="#header") Home
+							li
+								a(href="#sobre") Sobre
+							li
+								a(href="#competicao") Competições
+							li
+								a(href="#youtube") Vídeos
+							li
+								a(href="#contato") Contato
 		section#slideshow
-			div.active
-			div
-			div
-			div
-			div.last
+			.container-fluid
+				.row
+					.col-md-12
+						div.active
+						div
+						div
+						div
+						div.last
 		section#sobre
-			.content
-				h2 Sobre
-				h3 Me conheça um pouco mais
-				.fotos
-					.foto.ft1
-					.foto.ft2
-					.foto.ft3
-				.texto
-					p A natação faz parte da minha vida desde quando eu tinha 7 anos de idade, quando iniciei minha vida esportiva no Divinópolis Clube (Divinópolis – MG), participando de campeonatos regionais. Em 1998, comecei a nadar pelo clube Álvares Cabral (Vitória – ES), onde participei de vários campeonatos como o Campeonato Capixaba, o Campeonato Sudeste (RJ, SP e MG), o Troféu Kurosa (Ipatinga - MG), entre outros.
+			.container
+				.row
+					.col-md-12
+						h2 Sobre
+						h3 Me conheça um pouco mais
+				.row
+					.col-md-6
+						img(src="images/sobre.jpg")
+					.col-md-6
+						p A natação faz parte da minha vida desde quando eu tinha 7 anos de idade, quando iniciei minha vida esportiva no Divinópolis Clube (Divinópolis – MG), participando de campeonatos regionais. Em 1998, comecei a nadar pelo clube Álvares Cabral (Vitória – ES), onde participei de vários campeonatos como o Campeonato Capixaba, o Campeonato Sudeste (RJ, SP e MG), o Troféu Kurosa (Ipatinga - MG), entre outros.
 
-					p De 2002 a 2008, já nadando pelo Barroca Tênis Clube (Belo Horioznte – MG), participei dos campeonatos Mineiros e Sudeste. No final de 2011, após uma pausa, retornei ao Barroca Tênis Clube (Master Enes) conseguindo em 2012 os seguintes resultados: 3º lugar nos 200m peito, 4º Lugar nas provas 50m peito e 100m peito e 7º lugar nos 100m medley no Campeonato Sul-Americano Master de Natação, que ocorreu na Vila Olímpica de Manaus em Manaus/AM. Também em 2012, fui o 2º melhor atleta do ano na categoria Pré-Master em Minas Gerais, sendo recordista mineiro na prova de 100m peito em piscinas de 25m.
+						p De 2002 a 2008, já nadando pelo Barroca Tênis Clube (Belo Horioznte – MG), participei dos campeonatos Mineiros e Sudeste. No final de 2011, após uma pausa, retornei ao Barroca Tênis Clube (Master Enes) conseguindo em 2012 os seguintes resultados: 3º lugar nos 200m peito, 4º Lugar nas provas 50m peito e 100m peito e 7º lugar nos 100m medley no Campeonato Sul-Americano Master de Natação, que ocorreu na Vila Olímpica de Manaus em Manaus/AM. Também em 2012, fui o 2º melhor atleta do ano na categoria Pré-Master em Minas Gerais, sendo recordista mineiro na prova de 100m peito em piscinas de 25m.
+				.row
+					.col-md-6
+						img(src="images/sobre2.jpg")
+					.col-md-6
+						p Em 2013, comecei a usar o crossfit como preparação física para melhorar meu desempenho nas piscinas e fui o melhor atleta do ano na categoria 25+ em Minas Gerais, sendo o recordista mineiro na prova dos 100m peito em piscinas de 50m e nos 50 e 100m em piscinas de 25m.
 
-					p Em 2013, comecei a usar o crossfit como preparação física para melhorar meu desempenho nas piscinas e fui o melhor atleta do ano na categoria 25+ em Minas Gerais, sendo o recordista mineiro na prova dos 100m peito em piscinas de 50m e nos 50 e 100m em piscinas de 25m.
+						p Em 2014, fui o melhor atleta do ano na categoria 25+ em Minas Gerais, participei do Campeonato Mundial de Natação Master que ocorreu em Montreal no Canadá.
+				.row
+					.col-md-6
+						img(src="images/sobre3.jpg")
+					.col-md-6
+						p Em 2015, fui o 2º melhor atleta do ano na categoria 25+ em Minas Gerais, me lesionei durante os treinamentos. Tive tendinite no ombro direito, estiramento muscular no ombro esquerdo e tendinite no joelho esquerdo.
 
-					p Em 2014, fui o melhor atleta do ano na categoria 25+ em Minas Gerais, participei do Campeonato Mundial de Natação Master que ocorreu em Montreal no Canadá.
-
-					p Em 2015, fui o 2º melhor atleta do ano na categoria 25+ em Minas Gerais, me lesionei durante os treinamentos. Tive tendinite no ombro direito, estiramento muscular no ombro esquerdo e tendinite no joelho esquerdo.
-
-					p Em 2016, fui o 3º melhor atleta do ano na categoria 25+ em Minas Gerais, participei do Sul Americano de Natação Master que ocorreu em Maldonado no Uruguai e tive como melhor resultado o 4º lugar na prova de 400 meldey.
-
+						p Em 2016, fui o 3º melhor atleta do ano na categoria 25+ em Minas Gerais, participei do Sul Americano de Natação Master que ocorreu em Maldonado no Uruguai e tive como melhor resultado o 4º lugar na prova de 400 meldey.
 
 				//- a.button(href="javascript:void(0);") Seja um patrocinador
 		section#competicao
-			.content
-				h2 Competições
-				h3 Veja meus últimos resultados
-				ul
-					li
-						.foto.mineiro-inverno
-						.dados
-							.data 
-								span 03/04 de Junho
-							.comp
-								span Campeonato Mineiro de Inverno
-							.local
-								span Olympico Club
-							.provas
-								span
-									span 100m Peito - 1:13.48
-									span 50m Borboleta - 30.46
-									span 100m Medley - 1:06.62
-									span 100m Borboleta - 1:09.38
-					li
-						.foto.festival3
-						.dados
-							.data 
-								span 05 de Maio
-							.comp
-								span III Festival de Natação Master
-							.local
-								span Jaraguá Country Club
-							.provas
-								span
-									span 50m Peito - 34.76
-									span 200m Medley - 2:39.63
-					li
-						.foto.festival2
-						.dados
-							.data 
-								span 01 de Abril
-							.comp
-								span II Festival de Natação Master
-							.local
-								span C.O.P.M.
-							.provas
-								span
-									span 50m Peito - 33.74
-									span 100m Borboleta - 1:11.67
-					li
-						.foto.festival1
-						.dados
-							.data 
-								span 11 de Março
-							.comp
-								span II Festival de Natação Master
-							.local
-								span C.O.P.M.
-							.provas
-								span
-									span 100m Peito - Desclassificado
-									span 100m Medley - 1:08.71
+			.container
+				.row
+					.col-md-12
+						h2 Competições
+						h3 Veja meus últimos resultados
+						ul
+							li
+								.foto.mineiro-inverno
+								.dados
+									.data 
+										span 03/04 de Junho
+									.comp
+										span Campeonato Mineiro de Inverno
+									.local
+										span Olympico Club
+									.provas
+										span
+											span 100m Peito - 1:13.48
+											span 50m Borboleta - 30.46
+											span 100m Medley - 1:06.62
+											span 100m Borboleta - 1:09.38
+							li
+								.foto.festival3
+								.dados
+									.data 
+										span 05 de Maio
+									.comp
+										span III Festival de Natação Master
+									.local
+										span Jaraguá Country Club
+									.provas
+										span
+											span 50m Peito - 34.76
+											span 200m Medley - 2:39.63
+							li
+								.foto.festival2
+								.dados
+									.data 
+										span 01 de Abril
+									.comp
+										span II Festival de Natação Master
+									.local
+										span C.O.P.M.
+									.provas
+										span
+											span 50m Peito - 33.74
+											span 100m Borboleta - 1:11.67
+							li
+								.foto.festival1
+								.dados
+									.data 
+										span 11 de Março
+									.comp
+										span II Festival de Natação Master
+									.local
+										span C.O.P.M.
+									.provas
+										span
+											span 100m Peito - Desclassificado
+											span 100m Medley - 1:08.71
 				//- a.button(href="javascript:void(0);") Mostrar mais
 		section#youtube
-			.content
-				h2 Meu canal no youtube
-				h3 Confira algumas provas, meus treinamentos e meu dia a dia!
-				ul
-				a.button(href="https://www.youtube.com/channel/UCSVOoIaZolUTQo05oLvk71g?sub_confirmation=1", target="_blank") Inscreva-se
+			.container
+				.row
+					.col-md-12
+						h2 Meu canal no youtube
+						h3 Confira algumas provas, meus treinamentos e meu dia a dia!
+				.row.videos
+
+				.row
+					.col-md-12
+						a.button(href="https://www.youtube.com/channel/UCSVOoIaZolUTQo05oLvk71g?sub_confirmation=1", target="_blank") Inscreva-se
 		section#contato
 			.content
 				h2 Contato
@@ -179,6 +198,7 @@ html
 			}(document, 'script', 'facebook-jssdk'));
 
 		script(type="text/javascript", src="https://code.jquery.com/jquery-3.2.1.min.js")
+		script(type="text/javascript", src="js/slick.js")
 		script(type="text/javascript", src="js/main.js")
 
 

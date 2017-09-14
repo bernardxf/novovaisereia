@@ -40,6 +40,12 @@ gulp.task('copyJS', function() {
 		.pipe(gulp.dest(destino+'js/'));
 });
 
+gulp.task('copyCSS', function() {
+	return gulp.src('dev/stylus/*.css')
+		.pipe(copy())
+		.pipe(gulp.dest(destino+'style/'));
+});
+
 gulp.task('uglyfly', function() {
 	return gulp.src('dev/js/**/*')
 		.pipe(uglyfly())
@@ -68,5 +74,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('images',['imagemin'], function() {});
-gulp.task('site',['pug','stylus','copyFonts','copyJS','copyPHP','watch'], function() {});
-gulp.task('build',['pug','stylusBuild','copyFonts','uglyfly','copyPHP'], function() {});
+gulp.task('site',['pug','stylus','copyFonts','copyJS','copyPHP','copyCSS','watch'], function() {});
+gulp.task('build',['pug','stylusBuild','copyFonts','copyCSS','uglyfly','copyPHP'], function() {});

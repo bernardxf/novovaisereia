@@ -52,11 +52,9 @@ footer
 	position relative
 	vertical-align top
 	width 100%
-	.content
-		display block
-		margin 0 auto
-		padding 50px 0
-		width 1200px
+	
+section
+	padding 40px 0
 		
 header
 	background-color #125697
@@ -143,36 +141,19 @@ header
 	background-color #F5F6F7
 	
 #sobre
-	h3
-		margin 0 0 30px
-	.fotos
-		display inline-block
-		margin 0 30px 0 0
-		vertical-align top
-		width 460px
-		.foto
-			display block
-			height 306px
-			margin 0 0 20px 0
-			width 460px
-			&.ft1
-				background url(../images/sobre.jpg) 0 0 no-repeat
-			&.ft2
-				background url(../images/sobre2.jpg) 0 0 no-repeat
-				height 259px
-			&.ft3
-				background url(../images/sobre3.jpg) 0 0 no-repeat
-			
-	.texto
-		display inline-block
-		vertical-align top
-		width 630px
-		p
-			color #535353
-			display block
-			font-size 22px
-			font-weight 300
-			margin 0 0 15px
+	.row
+		margin 30px 0 0
+		&:first-child
+			margin 0
+	img
+		display block
+		width 100%
+	p
+		color #535353
+		display block
+		font-size 22px
+		font-weight 300
+		margin 0 0 15px
 #competicao
 	ul
 		display block

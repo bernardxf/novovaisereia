@@ -7,7 +7,7 @@
 		videos();
 		enviaForm();
 		scrollMenu();
-		slide();
+		// slide();
 		
 	};
 
@@ -30,7 +30,7 @@
 			url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyBMlhB8C6gohtTX6s-FU1a8ePEXAVVcadg&part=snippet&maxResults=2&playlistId=PLg1mgM4-CUvHYUrq_nkaZ9lVDKYaj01KU",
 			success: function (response) {
 				for(var key in response.items) {
-					$('#youtube ul').append('<li><iframe width="550" height="309" src="https://www.youtube.com/embed/' + response.items[key].snippet.resourceId.videoId + '" frameborder="0" allowfullscreen></iframe><h3>' + response.items[key].snippet.title + '</h3></li>')
+					$('#youtube .row.videos').append('<div class="col-md-6"><iframe width="550" height="309" src="https://www.youtube.com/embed/' + response.items[key].snippet.resourceId.videoId + '" frameborder="0" allowfullscreen></iframe><h3>' + response.items[key].snippet.title + '</h3></div>')
 				}
 			}
 		});
@@ -102,23 +102,23 @@
 
 	};
 
-	var slide = function(){
+	// var slide = function(){
 
-		setInterval(function(){
-			var $active = $('#slideshow > div.active');
-			var $next = $active.next();
+	// 	setInterval(function(){
+	// 		var $active = $('#slideshow > div.active');
+	// 		var $next = $active.next();
 
-			if ($active.hasClass('last')) {
-				$active.siblings(":first").addClass('active');
-				$next.addClass('active');
-				$active.removeClass('active');
-			} else {
-				$next.addClass('active');
-				$active.removeClass('active');
-			}
-		},  4000);
+	// 		if ($active.hasClass('last')) {
+	// 			$active.siblings(":first").addClass('active');
+	// 			$next.addClass('active');
+	// 			$active.removeClass('active');
+	// 		} else {
+	// 			$next.addClass('active');
+	// 			$active.removeClass('active');
+	// 		}
+	// 	},  4000);
 		
-	}
+	// }
 
 	$(document).ready(init);
 })();
