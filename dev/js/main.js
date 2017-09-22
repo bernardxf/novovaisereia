@@ -7,7 +7,36 @@
 		videos();
 		enviaForm();
 		scrollMenu();
-		// slide();
+
+		$('.content-competicao').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			infinite: false,
+			arrows: false
+			// responsive: [{
+			// 	breakpoint: 480,
+			// 	settings: {
+			// 		dots: true
+			// 	}
+			// }]
+		});
+
+		$('#competicao .btnPrev').on('click', function(){
+			$('.content-competicao').slick('slickPrev');
+		});
+
+		$('#competicao .btnNext').on('click', function(){
+			$('.content-competicao').slick('slickNext');
+		});
+
+		$('.content-slide').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			arrows: false,
+			autoplay: true,
+  			autoplaySpeed: 4000
+		});
 		
 	};
 
@@ -18,7 +47,7 @@
 		resolution: 'low_resolution',
 		clientId: 'd5240c897f774a12b171275bb6c66b4e',
 		accessToken: '31555977.1677ed0.53b9acc89cb8452ebe0d5fff0f8d2d2e',
-		limit: 8,
+		limit: 6,
 		template: '<a href="{{link}}" target="_blank" class="insta-photo" title="{{caption}}"><img src="{{image}}" alt="{{caption}}" /><div class="info"><span>&hearts; {{likes}} ✏ {{comments}}</span></div></a>'
 	});
 
@@ -101,24 +130,6 @@
 		});
 
 	};
-
-	// var slide = function(){
-
-	// 	setInterval(function(){
-	// 		var $active = $('#slideshow > div.active');
-	// 		var $next = $active.next();
-
-	// 		if ($active.hasClass('last')) {
-	// 			$active.siblings(":first").addClass('active');
-	// 			$next.addClass('active');
-	// 			$active.removeClass('active');
-	// 		} else {
-	// 			$next.addClass('active');
-	// 			$active.removeClass('active');
-	// 		}
-	// 	},  4000);
-		
-	// }
 
 	$(document).ready(init);
 })();

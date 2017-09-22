@@ -53,11 +53,12 @@ html
 			.container-fluid
 				.row
 					.col-md-12
-						div.active
-						div
-						div
-						div
-						div.last
+						.content-slide
+							.img1
+							.img2
+							.img3
+							.img4
+							.img5
 		section#sobre
 			.container
 				.row
@@ -85,15 +86,49 @@ html
 						p Em 2015, fui o 2º melhor atleta do ano na categoria 25+ em Minas Gerais, me lesionei durante os treinamentos. Tive tendinite no ombro direito, estiramento muscular no ombro esquerdo e tendinite no joelho esquerdo.
 
 						p Em 2016, fui o 3º melhor atleta do ano na categoria 25+ em Minas Gerais, participei do Sul Americano de Natação Master que ocorreu em Maldonado no Uruguai e tive como melhor resultado o 4º lugar na prova de 400 meldey.
-
-				//- a.button(href="javascript:void(0);") Seja um patrocinador
+				.row
+					.col-md-12
+						.patrocinadores
+							h4 Patrocinadores
+							.patrocinios
+								a.crossfit(href="http://crossfitbh.com.br/", target="_blank", title="Crossfit BH")
+								a.nutriu(href="https://www.instagram.com/nutriufit/", target="_blank", title="Nutriu Fit")
+								a.mundial(href="http://www.mundialvistos.com.br/", target="_blank", title="Mundial Vistos")
+								a.soul(href="http://soultraveler.com.br/", target="_blank", title="Soul Traveler")
+							a.button(href="#contato") Seja um patrocinador
 		section#competicao
 			.container
 				.row
 					.col-md-12
 						h2 Competições
 						h3 Veja meus últimos resultados
-						ul
+						ul.content-competicao
+							li
+								.foto.festival5
+								.dados
+									.data 
+										span 02 de Setembro
+									.comp
+										span V Festival de Natação Master
+									.local
+										span Jaraguá Country Club
+									.provas
+										span
+											span 50m Costas - 31.61
+											span 50m Borboleta - 29.64
+							li
+								.foto.festival4
+								.dados
+									.data 
+										span 05 de Agosto
+									.comp
+										span IV Festival de Natação Master
+									.local
+										span Barroca Tênis Clube
+									.provas
+										span
+											span 100m Peito - 1:16.53
+											span 50m Livre - 27.46
 							li
 								.foto.mineiro-inverno
 								.dados
@@ -148,6 +183,9 @@ html
 										span
 											span 100m Peito - Desclassificado
 											span 100m Medley - 1:08.71
+						.btnNavegacao
+							.btnPrev &larr; Anterior 
+							.btnNext Próximo &rarr;
 				//- a.button(href="javascript:void(0);") Mostrar mais
 		section#youtube
 			.container
@@ -161,30 +199,39 @@ html
 					.col-md-12
 						a.button(href="https://www.youtube.com/channel/UCSVOoIaZolUTQo05oLvk71g?sub_confirmation=1", target="_blank") Inscreva-se
 		section#contato
-			.content
-				h2 Contato
-				h3 
-					| Entre em contato para patricínios, parcerias ou até mesmo para me dar uma força!
-					br
-					| Será muito bom receber uma mensagem sua!
-					form
-						#retornoHTML
-						.left
-							input#nome(type="text", placeholder="Nome", name="nome")
-							input#email(type="email", placeholder="E-mail", name="email")
-							input#assunto(type="text", placeholder="Assunto", name="assunto")
-						textarea#msg(placeholder="Mensagem", name="msg")
-						button#enviar.button Enviar
+			.container
+				.row
+					.col-md-12
+						h2 Contato
+						h3 
+							| Entre em contato para patricínios, parcerias ou até mesmo para me dar uma força!
+							br
+							| Será muito bom receber uma mensagem sua!
+						form
+							#retornoHTML
+							.row
+								.col-md-6
+									input#nome(type="text", placeholder="Nome", name="nome")
+									input#email(type="email", placeholder="E-mail", name="email")
+									input#assunto(type="text", placeholder="Assunto", name="assunto")
+								.col-md-6
+									textarea#msg(placeholder="Mensagem", name="msg")
+							.row
+								.col-md-12
+									button#enviar.button Enviar
 		footer
-			.content
-				.insta
-					h2 Instagram
-					#instafeed
-				.face
-					h2 Facebook
-					.fb-page(data-href="https://www.facebook.com/vaisereia/", data-small-header="false", data-adapt-container-width="true", data-hide-cover="false", data-show-facepile="true", data-width="430")
-						blockquote.fb-xfbml-parse-ignore(cite="https://www.facebook.com/vaisereia/")
-							a(href="https://www.facebook.com/vaisereia/") Vai Sereia
+			.container
+				.row
+					.col-md-7
+						.insta
+							h2 Instagram
+							#instafeed
+					.col-md-5
+						.face
+							h2 Facebook
+							.fb-page(data-href="https://www.facebook.com/vaisereia/", data-small-header="false", data-adapt-container-width="true", data-hide-cover="false", data-show-facepile="true", data-width="430")
+								blockquote.fb-xfbml-parse-ignore(cite="https://www.facebook.com/vaisereia/")
+									a(href="https://www.facebook.com/vaisereia/") Vai Sereia
 			.copy Vai sereia &copy; 2017 - Todos os direitos reservados
 
 		#fb-root

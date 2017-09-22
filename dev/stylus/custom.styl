@@ -28,6 +28,7 @@ h3
 	display block
 	font-size 23px
 	font-weight 300
+	margin 0 0 30px
 	text-align center
 
 .button
@@ -108,31 +109,38 @@ header
 #slideshow
 	display block
 	position relative
-	height 650px
+	height auto
+	padding 0
 	width 100%
-	div
-		background-position center
-		background-repeat no-repeat
-		background-size cover
-		bottom 0
+	.col-md-12
+		padding 0
+	.content-slide
 		display block
-		opacity 0
-		position absolute
-		left 0
-		right 0
-		top 0
-		transition all ease .5s
-		&.active
-			opacity 1
-		&:nth-child(1)
+		height 650px
+		overflow hidden
+		width 100%
+		.img1
+		.img2
+		.img3
+		.img4
+		.img5
+			background-position center
+			background-repeat no-repeat
+			background-size cover
+			display block
+			float left
+			height 650px
+			position relative
+			width 100%;
+		.img1
 			background-image url(../images/slide/01.png)
-		&:nth-child(2)
+		.img2
 			background-image url(../images/slide/02.png)
-		&:nth-child(3)
+		.img3
 			background-image url(../images/slide/03.png)
-		&:nth-child(4)
+		.img4
 			background-image url(../images/slide/04.png)
-		&:nth-child(5)
+		.img5
 			background-image url(../images/slide/05.png)
 			
 		
@@ -141,10 +149,6 @@ header
 	background-color #F5F6F7
 	
 #sobre
-	.row
-		margin 30px 0 0
-		&:first-child
-			margin 0
 	img
 		display block
 		width 100%
@@ -154,10 +158,40 @@ header
 		font-size 22px
 		font-weight 300
 		margin 0 0 15px
+	.patrocinadores
+		display block
+		margin 30px 0 0
+		text-align center
+		width 100%
+		h4
+			color #535353
+			display block
+			font-size 16px
+			margin 0 auto 20px
+			text-transform uppercase
+		.patrocinios
+			display block
+			margin 0 auto 30px
+			a
+				display inline-block
+				font-size 0
+				height 80px
+				margin 0 20px
+				vertical-align top
+				width 80px
+				&.crossfit
+					background url(../images/patrocinios/crossfit.png) 0 0 no-repeat
+				&.nutriu
+					background url(../images/patrocinios/nutriu.jpg) 0 0 no-repeat
+				&.mundial
+					background url(../images/patrocinios/mundial.png) 0 0 no-repeat
+				&.soul
+					background url(../images/patrocinios/soul.png) 0 0 no-repeat
+				
 #competicao
 	ul
 		display block
-		margin 30px 0 0
+		overflow hidden
 		li
 			display inline-block
 			margin 0 20px 20px
@@ -169,7 +203,11 @@ header
 				background-size cover
 				display block
 				height 200px
-				width 355px
+				width 100%
+				&.festival5
+					background-image url(../images/fotos/5festival.jpg)
+				&.festival4
+					background-image url(../images/fotos/4festival.jpg)
 				&.mineiro-inverno
 					background-image url(../images/fotos/mineiro-inverno.jpg)
 				&.festival3
@@ -182,9 +220,9 @@ header
 				border-top 2px solid #00529B
 				background-color #fff
 				display block
-				height 250px
+				height 284px
 				padding 10px
-				width 335px
+				width 100%
 				div
 					color #545454
 					display block
@@ -234,6 +272,25 @@ header
 						height 27px
 						left 13px
 						width 23px
+	.btnNavegacao
+		display block
+		text-align center
+		.btnPrev
+		.btnNext
+			border 2px solid #00529b
+			color #005299
+			cursor pointer
+			display inline-block
+			font-size 18px
+			height 35px
+			line-height 32px
+			margin 0 10px
+			text-align center
+			vertical-align top
+			width 130px
+			&:hover
+				background-color #00529b
+				color #fff
 #youtube
 	ul
 		display block
@@ -254,41 +311,36 @@ header
 #contato
 	form
 		display block
-		margin 20px auto 0
-		width 970px
+		margin 0 auto
+		width 100%
 		#retornoHTML
 			display block
 			font-size 18px
 			font-weight 700
 			margin 0 0 20px
-		.left
-			display inline-block
-			margin 0 15px 0 0
-			vertical-align top
-			width 450px
-			input
-				border 2px solid #fff
-				color #666
-				display block
-				font-size 16px
-				height 55px
-				margin 0 0 20px
-				padding 0 15px
-				text-transform uppercase
-				width 420px
-				&:focus
-					border-color #00509B
+		input
+			border 2px solid #fff
+			color #666
+			display block
+			font-size 16px
+			height 55px
+			margin 0 0 20px
+			padding 0 15px
+			text-transform uppercase
+			width 100%
+			&:focus
+				border-color #00509B
 		textarea
 			border 2px solid #fff
 			color #666
 			display inline-block
 			font-size 16px
-			height 183px
+			height 206px
 			margin 0 0 15px
 			padding 15px
 			text-transform uppercase
 			vertical-align top
-			width 470px
+			width 100%
 			&:focus
 				border-color #00509B
 		button
@@ -298,37 +350,32 @@ header
 				
 footer
 	background-color #222429
-	.content
-		padding 30px 0
-		.insta
-		.face
-			display inline-block
-			vertical-align top
-			h2
-				color #fff
-				font-size 40px
-				margin 0 0 10px
-				text-align left
-				text-transform capitalize
-		.insta
-			width 730px
-			h2
-				padding 0 0 0 4px
-			#instafeed
-				a
-					display inline-block
-					height 170px
-					vertical-align top
-					margin 5px
-					width 170px
-					img
-						display block
-						height 100%
-						width 100%
-					.info
-						display none
-		.face
-			width 430px
+	.insta
+	.face
+		display inline-block
+		vertical-align top
+		h2
+			color #fff
+			font-size 40px
+			margin 0 0 10px
+			text-align left
+			text-transform capitalize
+	.insta
+		h2
+			padding 0 0 0 4px
+		#instafeed
+			a
+				display inline-block
+				height 170px
+				vertical-align top
+				margin 5px
+				width 170px
+				img
+					display block
+					height 100%
+					width 100%
+				.info
+					display none
 	.copy
 		background-color #151619
 		color #999
