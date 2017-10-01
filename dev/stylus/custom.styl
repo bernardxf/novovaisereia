@@ -1,25 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700')
-
 *
 	margin 0
 	outline none
 	padding 0
 	-webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
+	-moz-osx-font-smoothing grayscale
 a
 	text-decoration none
 ul
 	list-style none
 body
-	font-family Raleway
+	font-family 'ralewayregular'
 	font-size 14px
-	font-weight 400
-	
+
 h2
 	color #0A5299
 	display block
+	font-family 'ralewaybold'
 	font-size 40px
-	font-weight 700
 	text-align center
 	text-transform uppercase
 
@@ -27,7 +24,7 @@ h3
 	color #535353
 	display block
 	font-size 23px
-	font-weight 300
+	font-family 'ralewaylight'
 	margin 0 0 30px
 	text-align center
 
@@ -53,15 +50,57 @@ footer
 	position relative
 	vertical-align top
 	width 100%
-	
+
 section
 	padding 40px 0
-		
+
 header
 	background-color #125697
 	.content
 		height 100px
 		padding 0
+	#menu-mobile
+		cursor pointer
+		display none
+		float right
+		height 25px
+		margin 20px 0 0
+		position relative
+		transform rotate(0deg)
+		transition .5s ease-in-out
+		width 45px
+		span
+			background #fff
+			display block
+			height 5px
+			border-radius 5px
+			left 0
+			opacity 1
+			position absolute
+			transform rotate(0deg)
+			transition .25s ease-in-out
+			width 100%
+			&:nth-child(1)
+				top 0px
+			&:nth-child(2)
+			&:nth-child(3)
+				top 10px
+			&:nth-child(4)
+				top 20px
+		&.ativo
+			span
+				&:nth-child(1)
+					top 10px
+					width 0%
+					left 50%
+				&:nth-child(2)
+					transform rotate(45deg)
+				&:nth-child(3)
+					transform rotate(-45deg)
+				&:nth-child(4)
+					left 50%
+					top 10px
+					width 0%
 	.social
 		display block
 		float right
@@ -83,7 +122,10 @@ header
 			&.fbook:before
 				content '\e901'
 	.logo
-		background url(../images/logo.png) 0 0 no-repeat
+		background-image url(../images/logo.png)
+		background-position 0 0
+		background-repeat no-repeat
+		background-size cover
 		display block
 		height 61px
 		float left
@@ -105,7 +147,7 @@ header
 				text-transform uppercase
 				&:hover
 					text-decoration underline
-		
+
 #slideshow
 	display block
 	position relative
@@ -142,12 +184,11 @@ header
 			background-image url(../images/slide/04.png)
 		.img5
 			background-image url(../images/slide/05.png)
-			
-		
+
 #competicao
 #contato
 	background-color #F5F6F7
-	
+
 #sobre
 	img
 		display block
@@ -155,8 +196,8 @@ header
 	p
 		color #535353
 		display block
+		font-family 'ralewaylight'
 		font-size 22px
-		font-weight 300
 		margin 0 0 15px
 	.patrocinadores
 		display block
@@ -187,7 +228,7 @@ header
 					background url(../images/patrocinios/mundial.png) 0 0 no-repeat
 				&.soul
 					background url(../images/patrocinios/soul.png) 0 0 no-repeat
-				
+
 #competicao
 	ul
 		display block
@@ -238,7 +279,7 @@ header
 						position absolute
 						top 50%
 						transform translateY(-50%)
-					& > span 
+					& > span
 						border-left 1px solid #DEE1E3
 						display block
 						margin 0 0 0 50px
@@ -292,20 +333,10 @@ header
 				background-color #00529b
 				color #fff
 #youtube
-	ul
+	iframe
 		display block
-		margin 50px 0 0
-		li
-			display inline-block
-			padding 0 25px
-			vertical-align top
-			width 550px
-			h3
-				text-align left
-				font-size 18px
-				font-weight 700
-				margin 6px 0 0
-				text-transform uppercase
+		height 303px
+		width 100%
 	.button
 		margin 30px auto 0
 #contato
@@ -315,8 +346,8 @@ header
 		width 100%
 		#retornoHTML
 			display block
+			font-family 'ralewaybold'
 			font-size 18px
-			font-weight 700
 			margin 0 0 20px
 		input
 			border 2px solid #fff
@@ -347,13 +378,14 @@ header
 			background-color #f5f6f7
 			&:hover
 				background-color #00529B
-				
+
 footer
 	background-color #222429
 	.insta
 	.face
 		display inline-block
 		vertical-align top
+		width 100%
 		h2
 			color #fff
 			font-size 40px
@@ -366,10 +398,10 @@ footer
 		#instafeed
 			a
 				display inline-block
-				height 170px
+				height 102px
 				vertical-align top
 				margin 5px
-				width 170px
+				width 102px
 				img
 					display block
 					height 100%
@@ -398,4 +430,3 @@ footer
 
 
 
-	

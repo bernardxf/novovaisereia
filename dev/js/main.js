@@ -12,13 +12,17 @@
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			infinite: false,
-			arrows: false
-			// responsive: [{
-			// 	breakpoint: 480,
-			// 	settings: {
-			// 		dots: true
-			// 	}
-			// }]
+			arrows: false,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: { slidesToShow: 2 }
+				},
+				{
+					breakpoint: 768,
+					settings: { slidesToShow: 1 }
+				}
+			]
 		});
 
 		$('#competicao .btnPrev').on('click', function(){
@@ -37,17 +41,28 @@
 			autoplay: true,
   			autoplaySpeed: 4000
 		});
-		
+
+		// MENU MOBILE
+		$('#menu-mobile').on('click', function(){
+			if ($('#menu').hasClass('ativo')){
+				$(this).removeClass('ativo')
+				$('#menu').removeClass('ativo')
+			} else {
+				$(this).addClass('ativo')
+				$('#menu').addClass('ativo')
+			}
+		});
+
 	};
 
 	// INSTAGRAM
 	var feed = new Instafeed({
 		get: 'user',
 		userId: 31555977,
-		resolution: 'low_resolution',
+		resolution: 'standard_resolution',
 		clientId: 'd5240c897f774a12b171275bb6c66b4e',
 		accessToken: '31555977.1677ed0.53b9acc89cb8452ebe0d5fff0f8d2d2e',
-		limit: 6,
+		limit: 10,
 		template: '<a href="{{link}}" target="_blank" class="insta-photo" title="{{caption}}"><img src="{{image}}" alt="{{caption}}" /><div class="info"><span>&hearts; {{likes}} ✏ {{comments}}</span></div></a>'
 	});
 
@@ -59,7 +74,7 @@
 			url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyBMlhB8C6gohtTX6s-FU1a8ePEXAVVcadg&part=snippet&maxResults=2&playlistId=PLg1mgM4-CUvHYUrq_nkaZ9lVDKYaj01KU",
 			success: function (response) {
 				for(var key in response.items) {
-					$('#youtube .row.videos').append('<div class="col-md-6"><iframe width="550" height="309" src="https://www.youtube.com/embed/' + response.items[key].snippet.resourceId.videoId + '" frameborder="0" allowfullscreen></iframe><h3>' + response.items[key].snippet.title + '</h3></div>')
+					$('#youtube .row.videos').append('<div class="col-md-6"><iframe src="https://www.youtube.com/embed/' + response.items[key].snippet.resourceId.videoId + '?rel=0" frameborder="0" allowfullscreen></iframe><h3>' + response.items[key].snippet.title + '</h3></div>')
 				}
 			}
 		});
@@ -112,9 +127,9 @@
 	};
 
 	var scrollMenu = function(){
-		
+
 		$("#menu a").on('click', function(e) {
-		
+
 			var id = $(this).attr('href');
 
 			var $id = $(id);
